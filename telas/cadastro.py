@@ -8,29 +8,31 @@ def abrir_cadastro():
 
     notas_aluno = []
     
-    for i in range(7):
-        materia = input(f"Digite a matéria {i+1}:")
-        nota = float(input(f"Digite a nota da matéria {i+1}:"))
+    while True:
+
+        materia = input("Digite a matéria: ")
+        nota = float(input("Digite a nota: "))
 
         notas_aluno.append({
             "materia": materia,
             "nota": nota
         })
 
+        continuar = input("Deseja cadastrar outra matéria? (s/n): ")
 
-        voltar = input("\nDeseja voltar ao menu inicial? (s/n): ")
+        if continuar.strip().lower() == "n":
+            break
 
-        if voltar.strip().lower() == "s":
-            break 
-    
+        print("\nContinuando...")
+        
 
-    aluno = {
-        "nome": nome,
-        "notas": notas_aluno
-    }
+        aluno = {
+            "nome": nome,
+            "notas": notas_aluno
+        }
 
-    alunos.append(aluno)
+        alunos.append(aluno)
 
-    print("Cadastro e notas realizados com sucesso!\n")
+        print("Cadastro e notas realizados com sucesso!\n")
 
    

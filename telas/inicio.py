@@ -3,20 +3,22 @@ from telas.lista import abrir_lista
 
 def abrir_inicio():
 
-    print("---  S I S T E M A   P A R A   C A D A S T R O   D E   N O T A S  ---\n")
+    while True:
 
-    print("[1] Cadastro de Notas e Aluno")
-    print("[2] Lista de notas e alunos")
-    print("[3] Sair do Sistema\n")
+        print("\n---  S I S T E M A   P A R A   C A D A S T R O   D E   N O T A S  ---\n")
 
-    opcao = int(input("Digite a opção desejada:"))
+        print("[1] Cadastro de Notas e Aluno")
+        print("[2] Lista de notas e alunos")
+        print("[3] Sair do Sistema\n")
 
-    if opcao == 1:
-        abrir_cadastro()
-    elif opcao == 2:
-        abrir_lista()
-    elif opcao == 3:
-        print("Saindo do sistema...")
-        exit()
-    else:
-        print("Opção inválida. Tente novamente.")
+        opcao = int(input("Digite a opção desejada:"))
+
+        if opcao == 1:
+            abrir_cadastro()
+        elif opcao == 2:
+            abrir_lista()
+        elif opcao == 3:
+            print("Saindo do sistema...")
+            exit()
+        else:
+            print("Opção inválida. Tente novamente.")
